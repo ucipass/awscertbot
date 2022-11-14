@@ -2,7 +2,6 @@
 version: "3.9"
 services:
   awscertbot:
-    build: .
     container_name : awscertbot
     environment:
       - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
