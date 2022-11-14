@@ -1,0 +1,15 @@
+# Docker compose will read environment variables from .env file.
+version: "3.9"
+services:
+  awscertbot:
+    build: .
+    container_name : awscertbot
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_ROUTE53_ZONE=${AWS_ROUTE53_ZONE}
+      - CERTIFICATE_FQDN=${CERTIFICATE_FQDN}
+      - CERTIFICATE_EMAIL=${CERTIFICATE_EMAIL}
+    volumes:
+      - ./letsencrypt:/etc/letsencrypt
+    image: "ucipass/awscertbot"
