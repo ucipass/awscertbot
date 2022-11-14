@@ -1,7 +1,8 @@
 FROM python:3.10.8-alpine
 
+WORKDIR /
+RUN mkdir /certificates
 WORKDIR /awscertbot
-
 COPY src/* ./
 RUN chmod a+x ./certbot.sh
 RUN chmod a+x ./auth-hook.py

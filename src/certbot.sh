@@ -5,4 +5,5 @@ certbot -d $CERTIFICATE_FQDN \
 --manual --preferred-challenges dns \
 --manual-auth-hook /awscertbot/auth-hook.py \
 --manual-cleanup-hook /awscertbot/cleanup-hook.py \
-certonly
+certonly && \
+cp -rL /etc/letsencrypt/live/$CERTIFICATE_FQDN /certificates
