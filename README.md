@@ -1,5 +1,5 @@
 # Main purpose
-Containerized application to automatically generate and renew letsencrypt certificates utilizing an existing AWS Route 53 DNS Zone and DNS authentication. 
+Containerized application to automatically generate and renew letsencrypt certificates utilizing an existing AWS Route 53 DNS Zone for DNS authentication. 
 
 # Usage
 ## Prerequisites
